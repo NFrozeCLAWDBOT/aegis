@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-aegis-void: #0D0A14;
+  --color-aegis-surface: #1A0E2E;
+  --color-aegis-border: #2D1B4E;
+  --color-aegis-primary: #7B2FBE;
+  --color-aegis-primary-hover: #C56FFF;
+  --color-aegis-accent: #E040FB;
+  --color-aegis-accent-end: #FF6FFF;
+  --color-aegis-text: #F0E6FF;
+  --color-aegis-text-muted: #A78BBE;
+  --color-aegis-mist: #D4A8F0;
+  --color-aegis-success: #4ADE80;
+  --color-aegis-warning: #FBBF24;
+  --color-aegis-danger: #EF4444;
+
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+:root {
+  /* shadcn/ui CSS variables mapped to Aegis palette */
+  --background: oklch(0.12 0.04 290);
+  --foreground: oklch(0.93 0.03 290);
+  --card: oklch(0.16 0.06 290);
+  --card-foreground: oklch(0.93 0.03 290);
+  --popover: oklch(0.16 0.06 290);
+  --popover-foreground: oklch(0.93 0.03 290);
+  --primary: oklch(0.50 0.20 290);
+  --primary-foreground: oklch(0.98 0.01 290);
+  --secondary: oklch(0.22 0.08 290);
+  --secondary-foreground: oklch(0.93 0.03 290);
+  --muted: oklch(0.22 0.08 290);
+  --muted-foreground: oklch(0.62 0.08 290);
+  --accent: oklch(0.65 0.25 310);
+  --accent-foreground: oklch(0.98 0.01 290);
+  --destructive: oklch(0.55 0.20 25);
+  --destructive-foreground: oklch(0.98 0.01 290);
+  --border: oklch(0.28 0.10 290);
+  --input: oklch(0.28 0.10 290);
+  --ring: oklch(0.50 0.20 290);
+  --radius: 0.75rem;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: #0D0A14;
+  color: #F0E6FF;
+  font-family: "IBM Plex Sans", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+code, pre, .font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Glass panel base */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient button */
+.btn-gradient {
+  background: linear-gradient(135deg, #7B2FBE, #E040FB);
+  transition: all 0.3s ease;
+}
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #C56FFF, #FF6FFF);
+  box-shadow: 0 0 20px rgba(224, 64, 251, 0.4);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0A14;
+}
+::-webkit-scrollbar-thumb {
+  background: #2D1B4E;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7B2FBE;
+}
