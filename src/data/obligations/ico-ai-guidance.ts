@@ -1,4 +1,4 @@
-import { Obligation } from "@/types";
+import type { Obligation } from "@/types";
 
 export const icoAiObligations: Obligation[] = [
   {
