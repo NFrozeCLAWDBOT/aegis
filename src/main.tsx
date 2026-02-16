@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.tsx";
+import { AssessmentProvider } from "./context/assessment-context.tsx";
 import { LandingPage } from "./pages/LandingPage.tsx";
 import { QuestionnairePage } from "./pages/QuestionnairePage.tsx";
 import { ResultsPage } from "./pages/ResultsPage.tsx";
@@ -21,6 +22,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AssessmentProvider>
+      <RouterProvider router={router} />
+    </AssessmentProvider>
   </StrictMode>
 );
