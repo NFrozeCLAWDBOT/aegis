@@ -1,11 +1,25 @@
-import { GlassPanel } from "@/components/layout/GlassPanel";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAssessment } from "@/context/assessment-context";
+import { ResultsDashboard } from "@/components/results/ResultsDashboard";
 
 export function ResultsPage() {
+  const { state } = useAssessment();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!state.isAssessmentComplete) {
+      navigate("/assess");
+    }
+  }, [state.isAssessmentComplete, navigate]);
+
+  if (!state.isAssessmentComplete) return null;
+
   return (
     <div className="relative z-10 min-h-screen px-4 py-12">
-      <GlassPanel className="max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-16">
-        <p className="text-aegis-text-muted text-center">Results dashboard coming soon...</p>
-      </GlassPanel>
+      <div className="max-w-5xl mx-auto">
+        <ResultsDashboard />
+      </div>
     </div>
   );
 }
