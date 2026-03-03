@@ -55,7 +55,7 @@ export function QuestionnaireWizard() {
         isStepComplete={isStepComplete}
       />
 
-      <div className="relative overflow-hidden min-h-[320px]">
+      <div className="relative overflow-x-hidden overflow-y-visible min-h-[320px] pb-4">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={currentStep}

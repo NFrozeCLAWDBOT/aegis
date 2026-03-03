@@ -15,10 +15,10 @@ export function HeroSection() {
         >
           AEGIS
         </h1>
-        <p className="text-aegis-text-muted text-lg md:text-xl mb-2 font-body">
+        <p className="text-aegis-text-primary text-lg md:text-xl mb-2 font-body">
           AI Regulatory Compliance Mapper
         </p>
-        <p className="text-aegis-text-muted/70 text-sm md:text-base mb-10 font-body max-w-md mx-auto">
+        <p className="text-aegis-text-primary/80 text-sm md:text-base mb-10 font-body max-w-md mx-auto">
           Turn the fragmented, multi-jurisdictional regulatory maze into a single, actionable compliance tracker.
         </p>
         <button

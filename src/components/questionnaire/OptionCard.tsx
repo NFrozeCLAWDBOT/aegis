@@ -21,10 +21,9 @@ export function OptionCard({
       onClick={onSelect}
       className={cn(
         "glass w-full text-left rounded-xl px-5 py-4 transition-all duration-200 cursor-pointer",
-        "hover:-translate-y-0.5 hover:border-white/20 hover:shadow-lg hover:shadow-aegis-primary/10",
         selected
-          ? "border-aegis-accent bg-aegis-accent/10 shadow-lg shadow-aegis-accent/20"
-          : "border-white/10"
+          ? "border-aegis-accent bg-aegis-accent/10 shadow-lg shadow-aegis-accent/20 -translate-y-0.5"
+          : "border-white/10 hover:-translate-y-0.5 hover:border-white/20 hover:shadow-lg hover:shadow-aegis-primary/10"
       )}
     >
       <div className="font-heading font-semibold text-aegis-text text-sm">
